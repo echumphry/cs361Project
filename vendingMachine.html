@@ -78,9 +78,15 @@
     <div class="col-sm-3">
         <div class = "amountContainer"> </div>
           <div class="btn-group-vertical" style="width: 14rem;">
+            
             <button type = "button" class="btn btn-secondary" onclick = "startCashTransaction()" data-toggle="modal" data-target="#coinModal">Coin</button>
-            <button type = "button" class="btn btn-primary"data-toggle = "modal" data-target = #creditModal>Debit/Credit</button>
-            <button type = "button" class="btn btn-danger">Cancel/Return Coin</button>
+
+            <button type = "button" class="btn btn-primary"data-toggle = "modal"
+             data-target = #creditModal>Debit/Credit</button>
+
+            <button type = "button" id = "cancelReturn" class="btn btn-danger"
+             onclick="cancelReturn()">Cancel/Return Coin</button>
+
             <button type = "button" class="btn btn-success">Submit</button>
           </div>
           
@@ -103,10 +109,10 @@
         <div class= "amountContainer"> </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        <button type="button" id="nickel" class="btn btn-secondary" onclick = "addNickel()">5&cent</button>
-        <button type="button" id ="dime" class="btn btn-secondary">10&cent</button>
+        <button type="button" id = "coinOk" class="btn btn-success" data-dismiss="modal">Ok</button>
+        <button type="button" id = "coinClose" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="button" id = "nickel" class="btn btn-secondary" onclick = "addNickel()">5&cent</button>
+        <button type="button" id = "dime" class="btn btn-secondary">10&cent</button>
         <button type="button" id = "quarter" class="btn btn-secondary">25&cent</button>
         <button type="button" id = "dollar" class="btn btn-secondary">$1.00</button>
       </div>
@@ -231,7 +237,11 @@
    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
    crossorigin="anonymous"></script>
 
+
    <script src = "vendingMachine.js" ></script>
+ 
+   
+
 
    
 
